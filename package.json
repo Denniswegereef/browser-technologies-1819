@@ -1,0 +1,59 @@
+{
+  "name": "browser-technology",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "format": "prettier --write \"server/**/*.js\"",
+    "xo": "xo",
+    "sass": "node_modules/.bin/node-sass --include-path scss server/scss/_main.scss server/public/css/main.css",
+    "sass-watch": "node_modules/.bin/nodemon -e scss -x npm run sass",
+    "server": "node_modules/.bin/nodemon server/index.js",
+    "watch": "npm run server & npm run sass-watch",
+    "ngrok": "node_modules/.bin/ngrok http 8080"
+  },
+  "bugs": {
+    "url": "https://github.com/Denniswegereef/performance-matters-1819/issues"
+  },
+  "homepage": "https://noneyet.com",
+  "author": "Dennis Wegereef",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Denniswegereef/browser-technology.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chalk": "^2.4.2",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.15.6",
+    "lodash": "^4.17.11",
+    "mongodb": "^3.1.13",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "ngrok": "^3.1.1",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.10",
+    "prettier": "^1.16.4",
+    "xo": "^0.24.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "xo": {
+    "extends": [
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  }
+}

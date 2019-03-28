@@ -1,0 +1,14 @@
+<h1>
+    Here is your question
+    {{ data.question }}
+
+    <ul>
+        {{#each data.answers}}
+        <li>{{this.answer}}</li>
+        {{/each}}
+    </ul>
+
+    See the votes <a href="../result/{{data._id}}">here</a>
+
+    <a href="../poll/{{data._id}}">Your sharable link </a>
+</h1>

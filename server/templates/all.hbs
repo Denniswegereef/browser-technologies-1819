@@ -1,0 +1,29 @@
+<h1>Alle {{ total }} polls</h1>
+
+<div class="sort">
+    <h3>Sorteer op:</h3>
+    <a href="../all/sort-populair">Populair</a>
+    <a href="../all/sort-new"> Nieuw</a>
+</div>
+
+<ul class="all">
+    {{#each all}}
+    <li class="all-item">
+        <div class="holder-left">
+            {{#if this.voted }}
+            <div class="tooltip">Voted</div>
+            {{/if}}
+            <h4>{{ this.question }}</h4>
+            <p>Aantal stemmen: <span>{{ this.amount }}</span></p>
+        </div>
+
+        <div class="holder-right">
+            {{#if this.voted }}
+            {{else}}
+            <a class="button vote" href="../poll/{{ this._id }}">Stem op poll</a>
+            {{/if}}
+            <a class="button" href="../result/{{ this._id }}">Bekijk resultaat</a>
+        </div>
+    </li>
+    {{/each}}
+</ul>

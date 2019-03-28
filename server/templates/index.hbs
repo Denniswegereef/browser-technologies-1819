@@ -1,0 +1,24 @@
+<form method="post" class="form">
+    <h1>Maak een poll</h1>
+
+    <div class="form-question">
+        <input name="question" autocomplete="off" value="Type je vraag hier" id="test">
+    </div>
+
+    <div class="form-answers">
+        {{#each inputValue}}
+        <input name="answers" autocomplete="off" value="{{ this }}">
+        {{/each}}
+
+        <div class="noscript">
+            <button type="submit" formaction="/add-row">Voeg een rij toe</button>
+            {{#if showRemove}}
+            <button type="submit" formaction="/remove-row">Verwijder een rij</button>
+            {{/if}}
+        </div>
+    </div>
+
+    <button class="form-button" type="submit" value="submit" formaction="/create-poll">Maak poll</button>
+</form>
+
+<script src="./js/home-form.js"></script>

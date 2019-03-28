@@ -1,0 +1,13 @@
+<ul class="result">
+    {{#each data.answers}}
+    <li class="result-item">
+        <div class="result-item-top">
+            <h2>{{ this.answer }}</h2>
+            <h3>{{ this.count}} stemmen</h3>
+        </div>
+        <div class="result-bar" style="width:{{ this.percent }}; background-color:{{ this.color }};">
+            <span>{{ this.percent }}</span>
+        </div>
+    </li>
+    {{/each}}
+</ul>

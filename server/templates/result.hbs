@@ -1,0 +1,23 @@
+<noscript>
+    <meta http-equiv="refresh" content="15">
+</noscript>
+
+<h1>{{ data.question }} </h1>
+
+
+<ul class="result">
+    {{#each data.answers}}
+    <li class="result-item">
+        <div class="result-item-top">
+            <h2>{{ this.answer }}</h2>
+            <h3>{{ this.count}} stemmen</h3>
+        </div>
+        <div class="result-bar" style="width:{{ this.percent }}; background-color:{{ this.color }};">
+            <span>{{ this.percent }}</span>
+        </div>
+    </li>
+    {{/each}}
+</ul>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="../js/socket.js"></script>

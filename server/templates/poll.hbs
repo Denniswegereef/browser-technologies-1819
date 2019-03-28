@@ -1,0 +1,13 @@
+<h1> {{ data.question }}</h1>
+{{#if additionalInfo}}
+<h1>{{additionalInfo}} </h1>
+{{/if}}
+<form action="/vote-poll/{{data._id}}" method="POST">
+    {{#each data.answers}}
+    <div>
+        <input type="radio" id="answer-{{@index}}" class="vote-answer" name="vote-answer" value="{{ @index }}">
+        <label for="answer-{{@index}}">{{ this.answer }}</label>
+    </div>
+    {{/each}}
+    <button type="submit">Stem</button>
+</form>

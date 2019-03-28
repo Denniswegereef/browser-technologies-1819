@@ -1,0 +1,34 @@
+// @keyframes slideBars {
+//   0% {
+//     transform: translateX(-200%);
+//   }
+//   100% {
+//     transform: translateX(0%);
+//   }
+// }
+
+.result {
+  overflow: hidden;
+  &-item {
+    border-bottom: 2px solid grey;
+    margin-bottom: 2rem;
+    &-top {
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+    }
+  }
+  &-bar {
+    height: 20px;
+    width: 2px;
+    background-color: red;
+    animation: slideBars 3s ease-out;
+    font-weight: bold;
+    position: relative;
+    span {
+      position: absolute;
+      right: -2.5rem;
+      height: 100%;
+    }
+  }
+}
