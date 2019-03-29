@@ -2,8 +2,8 @@
 
 Link to reviewing my OBA app and no javascript and color
 
-- [week 1, onderzoek kleur en javascript](week1.md)
-- [week 2, OBA review](week2.md)
+- [week 1, onderzoek kleur en javascript](Week1.md)
+- [week 2, OBA review](Week2.md)
 
 # Create your own poll
 
